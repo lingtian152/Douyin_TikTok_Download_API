@@ -26,8 +26,4 @@ RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ -U pip \
 # Install dependencies directly
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Make the start script executable
-RUN chmod +x start.sh
-
-# Command to run on container start
-CMD ["./start.sh"]
+CMD ["python3", "start.py"]
